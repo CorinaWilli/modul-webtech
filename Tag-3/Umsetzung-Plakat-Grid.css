@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-color: #633d38;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    border: #4CAF50;
+}
+
+.grid-item {
+
+    color: rgb(177, 49, 49);
+
+    
+    border: 1px solid #6d1010;
+
+}
+
+
+.red{
+    grid-column: 3/4;
+    grid-row: 2/6;
+    background-color: #ff0e0e;
+    aspect-ratio: 1;
+   
+}

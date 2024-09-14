@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plakat</title>
+    <style>
+        @font-face {
+            font-family: "Frankston Regular";
+            src: url("webfonts_Frankston-Regular/Frankston-Regular.woff") format("woff");
+
+        }
+
+        .wrapper {
+
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        h1 {
+            font-family: "Frankston Regular";
+            color: #372724;
+            font-size: 30vh;
+            letter-spacing: -12px;
+            line-height: 21vh;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding-right: 10vh;
+            margin-top: 5vh
+
+        }
+
+        body {
+            background-color: #633d38;
+            display: flex;
+            justify-content: space space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 50vh;
+            height: 50vh;
+            background-color: #a72523;
+            color: #372724;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 3vh;
+            border-radius: 4px;
+            padding: 100px;
+            text-align: right;
+            box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px auto;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+
+
+
+            transition: font-family 1.0s ease;
+
+
+        }
+
+        .box:hover {
+            font-weight: bold;
+            font-size: 3vh;
+        }
+
+        .spacing {
+            margin-bottom: 10vh;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Rot<br>
+                hko<br> <span class="spacing"></span>
+                Chil<br>
+                lida</h1>
+        </div>
+
+        <div class="box">
+            3.III - 8.IV<br>
+            Kunsthalle<br>
+            Basel<br>
+            Marc<br>
+            Rothko<br>
+            Eduardo<br>
+            Chillida
+        </div>
+    </div>
+</body>
+
+
+
+</html>

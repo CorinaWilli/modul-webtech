@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative; /* Relative Positionierung für den Container */
+}
+
+.grid-container {
+    position: relative; /* Relativer Container für absolute Positionierung */
+    width: 300px; /* Breite des Grids */
+    height: 200px; /* Höhe des Grids */
+}
+
+.grid {
+    position: absolute; /* Absolute Positionierung für die Grids */
+    top: 0;
+    left: 0;
+    width: 100%; /* Volle Breite des Containers */
+    height: 100%; /* Volle Höhe des Containers */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    padding: 10px;
+    opacity: 0.8; /* Transparenz für Überlagerungseffekt */
+}
+
+.grid1 {
+    background-color: rgba(76, 175, 80, 0.8); /* Hintergrund für das erste Grid */
+}
+
+.grid2 {
+    background-color: rgba(33, 150, 243, 0.8); /* Hintergrund für das zweite Grid */
+}
+
+.item {
+    background-color: #fff; /* Hintergrundfarbe der Grid-Elemente */
+    color: #ff0000; /* Schriftfarbe */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.item4 {
+
+    grid-column:3/4;
+    grid-row: 2/3
+}

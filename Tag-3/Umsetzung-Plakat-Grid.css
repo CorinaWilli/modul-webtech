@@ -1,34 +1,71 @@
+@font-face {
+    font-family: "Frankston Regular";
+    src: url("webfonts_Frankston-Regular/Frankston-Regular.woff") format("woff");
+}
+
 body {
     margin: 0;
     background-color: #633d38;
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
+    position: relative;
 }
 
 
-.grid-container {
+.grid-container-red {
     display: grid;
-    grid-template-columns: 3fr 3fr 6fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+    position: absolute;
+    grid-template-columns: 6fr 6fr 1fr;
+    grid-template-rows: 1fr 6 fr 1fr 1fr;
     height: 100vh;
     width: 100vw;
     border: #4CAF50;
 }
 
-.grid-item {
+.red {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    background-color: #c10707;
+    aspect-ratio: 1;
 
-    color: rgb(177, 49, 49);
+}
 
-    
-    border: 1px solid #6d1010;
+.grid-container-text {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 4fr 4fr 4fr 15fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
 
 }
 
 
-.red{
+
+
+
+.rothko h1{
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    font-size: 30vh;
+    padding-left: 5vw;
+}
+
+.chillida h1{
+    display:grid;
     grid-column: 3/4;
-    grid-row: 2/6;
-    background-color: #ff0e0e;
-    aspect-ratio: 1;
-   
+    grid-row: 2;
+}
+
+.h1 {
+    display: grid;
+    font-family: "Frankston Regular";
+    font-size: 25vh;
+    color: #372724;
+    line-height: 130px;
+    padding-top: 8vh;
+    
+
+
 }

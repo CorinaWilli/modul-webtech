@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Frankston Regular";
+    src: url("webfonts_Frankston-Regular/Frankston-Regular.woff") format("woff");
+}
+
+body {
+    margin: 0;
+    background-color: #633d38;
+}
+
+.grid-container-red {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 4fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    /*border: 10px solid #4CAF50; /* Sichtbar machen */
+}
+
+.red {
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #a82727;
+    height: 80vh;
+    aspect-ratio: 1;
+    color: #372724;
+    font-family: "Frankston Regular";
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+   
+    align-items: flex-end;
+   
+    padding-right: 15px;
+   
+    font-size: 3vh;
+    text-align: right;
+
+}
+
+.grid-container-text {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 3fr 3fr 3fr 3fr 15fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    /*border: 5px solid #da6cc9; /* Sichtbar machen */
+}
+
+
+.rothko {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 7vh;
+    /*border: 10px solid #5e4caf;*/
+}
+
+.chillida {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    display: flex;
+
+    /* border: 10px solid #5e4caf;*/
+}
+
+h1 {
+    font-family: "Frankston Regular";
+    font-size: 31vh;
+    color: #372724;
+    margin: 0;
+    line-height: 22vh;
+    letter-spacing: -1vw;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18vh;
+        line-height: 13vh;
+
+
+
+
+    }
+
+    .rothko {
+margin-top: -26vh;
+margin-left: -10vw;
+}
+.chillida {
+    margin-top: -19vh;
+    margin-left: -10vw
+}
+    .red {
+
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-top: 30vh;
+        display: flex;
+        flex-direction: column;
+        /* Stellt sicher, dass der Text untereinander angeordnet ist */
+        justify-content: end;
+        /* Vertikale Zentrierung */
+        align-items:end;
+        /* Horizontale Ausrichtung nach rechts */
+        padding-right: 10px;
+        /* Abstand vom rechten Rand */
+        font-size: 3vh;
+        line-height: 3vh;
+        width: 62vw;
+        /* Breite anpassen */
+        height: auto;
+        /* Höhe automatisch anpassen */
+        aspect-ratio: 1 / 1;
+        text-align: right;
+
+
+
+    }
+
+.spacing{
+    margin-top: 10vh;
+    display: inline-block;
+}
+
+}

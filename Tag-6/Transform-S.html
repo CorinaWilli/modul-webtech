@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .transforemd:hover {
+
+            transition-property: all;
+            transition-duration: 1.5s;
+            
+
+        }
+
+        body {
+
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+            font-size: 100vh;
+        }
+
+        .child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            mix-blend-mode: multiply;
+        }
+
+        .S1 {
+
+            transform: translate(3vw);
+            color: rgb(127, 242, 255);
+            transition-property: all;
+            transition-duration: 1.5s;
+            
+
+        }
+
+        .S2 {
+
+            color: rgb(211, 28, 147);
+            transition-property: all;
+            transition-duration: 1.5s;
+            
+
+
+        }
+
+
+        .S3 {
+
+            transform: translate(-3vw);
+            color: rgb(227, 255, 127);
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="group">
+        <div class="child S1 ">
+            S
+        </div>
+        <div class="child S2">
+            S
+        </div>
+        <div class="child S3 ">
+            S
+        </div>
+
+    </div>
+
+</body>
+
+</html>

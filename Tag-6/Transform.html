@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+        }
+
+        /* beide elemente liegen ursprünglich übereinander */
+        .not_transformed,
+        .transformed {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            height: 400px;
+            width: 400px;
+
+        }
+
+        /* zur visuellen unterscheidung zwei unterschiedliche stile zuweisen */
+
+        .not_transformed {
+            background-color: black;
+        }
+
+        .transformed {
+            background-color: rgba(0, 0, 255, 0.5);
+
+        }
+
+        .verschieben {
+            transform: translate(100px, 200px);
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);
+
+
+        }
+
+        .rotate {
+
+            transform: rotate(45deg);
+            transform-origin: top left;
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);
+
+
+        }
+
+        .scale {
+            transform: scale(0.8);
+            transform: scale(0.8, 2);
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);
+
+        }
+
+        .skew {
+
+            transform: skewX(10deg);
+            transform: skew(20deg, 10deg);
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.72, -0.36, 1, -0.02)
+        }
+
+
+        .mehrere {
+            transform: rotate(45deg) skew(20deg, 10deg) translate(100px, 200px);
+            transform-origin: top left;
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);
+
+        }
+
+        /*test transformationen*/
+
+
+
+        .transformed {
+            height: 500px;
+            background-color: lightblue;
+            /*transition-property: all;
+            transition-duration: 1.5s;
+            transition-timing-function: cubic-bezier(.68, -0.34, .38, 1.43);*/
+
+
+        }
+
+        .transformed:hover {
+
+            background-color: black;
+            transform: translate(100px, 200px);
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+
+
+    <section>
+        <h1>verschieben</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed verschieben ">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>rotieren</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed rotate">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>scale</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed scale">
+                scale
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h1>skew</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed skew">
+                scale
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h1>mehrere</h1>
+        <div class="group">
+            <div class="not_transformed">
+            </div>
+            <div class="transformed mehrere">
+                scale
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

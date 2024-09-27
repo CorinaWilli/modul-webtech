@@ -3,9 +3,73 @@
     src: url("webfonts_Frankston-Regular/Frankston-Regular.woff") format("woff");
 }
 
+
+
+@keyframes fadeInx {
+    0% {
+        opacity: 0;
+        transform: translatex(-10vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+@keyframes colorChangeRed {
+    0% {
+        background-color: #a82727;
+    }
+    25% {
+        background-color: #e03838 ;
+    }
+    50% {
+        background-color: #cf2323;
+    }
+    75% {
+        background-color: #9b3838;
+    }
+    100% {
+        background-color:#a82727 ;
+    }
+}
+
+/* @keyframes colorChangeBackground {
+    0% {
+        background-color: #633d38;
+    }
+    
+    50% {
+        background-color: #853333;
+    }
+    100% {
+        background-color:#633d38 ;
+    }
+} */
+
+@keyframes colorChangeTitel {
+    0% {
+        color: #372724;
+    }
+    25% {
+        color: #421f1f ;
+    }
+    50% {
+        color: #590505;
+    }
+    75% {
+        color: #4e1a1a;
+    }
+    100% {
+        color:#372724 ;
+    }
+}
+
 body {
     margin: 0;
     background-color: #633d38;
+    animation: colorChangeBackground 16s infinite
 }
 
 .grid-container-red {
@@ -30,23 +94,13 @@ body {
     justify-content: center;
     align-items: flex-end;
     text-align: right;
-    
-    
-   /* z-index: 1; Hover-Effekt bringt rote Fläche nach vorne:(*/
-    
-
+    animation: colorChangeRed 8s infinite;
 
 }
 
-/*.red div:hover {
-    
-  
-    transform: scale(1.05);
-    font-size: larger;
-    z-index: 1;
-    
 
-}*/
+
+
 
 .red div {
     padding-right: 16px;
@@ -59,6 +113,8 @@ body {
     grid-template-rows: 1fr 1fr;
     height: 100vh;
     width: 100vw;
+
+
 
 }
 
@@ -84,6 +140,8 @@ h1 {
     margin: 0;
     line-height: 22vh;
     letter-spacing: -1vw;
+    animation: fadeInx 1.0s;
+    animation: colorChangeTitel 18s infinite;
 }
 
 @media (max-width: 1024px)
@@ -103,7 +161,6 @@ h1 {
     .red {
         grid-column: 2/3;
         grid-row: 2/3;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -143,6 +200,7 @@ h1 {
         font-size: 14vh;
         line-height: 11vh;
         padding-left: 8vw;
+    
     }
 
     .grid-container-red {

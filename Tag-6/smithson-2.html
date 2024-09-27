@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smithson</title>
+
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .group {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+        }
+
+        .child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            mix-blend-mode: multiply;
+
+            font-size: 50vw;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .magenta {
+            color: magenta;
+            animation-name: buchstabelinks;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+           
+
+
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .blue {
+            color: cyan;
+            animation-name: buchstaberechts;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+           
+           
+        }
+
+        @keyframes buchstabelinks {
+
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+
+                transform: translate(-100px);
+
+            }
+
+            100% {
+                transform: translate(-50px)
+            }
+        }
+
+        @keyframes buchstaberechts {
+
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+
+                transform: translate(100px);
+
+            }
+
+            100% {
+                transform: translate(50px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <div class="child magenta ">
+            S
+        </div>
+        <div class="child yellow">
+            S
+        </div>
+        <div class="child blue">
+            S
+        </div>
+    </div>
+</body>
+
+</html>

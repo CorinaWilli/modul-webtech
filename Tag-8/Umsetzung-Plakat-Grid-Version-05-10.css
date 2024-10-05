@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Frankston Regular";
+    src: url("webfonts_Frankston-Regular/Frankston-Regular.woff") format("woff");
+}
+
+@keyframes slideIn {
+
+    0%{
+transform: translate(-250px);
+
+    }
+
+    100%{
+
+        transform: translate(0px);   
+    }
+}
+
+/*Animationen Farbwechsel durchgehend*/
+@keyframes colorChangeTitel {
+    0% {
+        color: #3a1e1c;
+    }
+
+    25% {
+        color: #421f1f;
+    }
+
+    50% {
+        color: #590505;
+    }
+
+    75% {
+        color: #4e1a1a;
+    }
+
+    100% {
+        color: #3a1e1c;
+    }
+}
+
+@keyframes colorChangeRed {
+    0% {
+        background-color: #a82727;
+    }
+
+    25% {
+        background-color: #e03838;
+    }
+
+    50% {
+        background-color: #cf2323;
+    }
+
+    75% {
+        background-color: #9b3838;
+    }
+
+    100% {
+        background-color: #a82727;
+    }
+}
+
+@keyframes colorChangeBackground {
+    0% {
+        background-color: #5f352f;
+    }
+
+    50% {
+        background-color: #812323;
+    }
+
+    100% {
+        background-color: #5f352f;
+    }
+}
+
+
+/*Animation Cursor mit JavaScript*/
+.cursorFollower {
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgb(150, 17, 17);
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.cursorFollowerDot {
+    position: fixed;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgb(85, 14, 14);
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+    z-index: 999;
+    pointer-events: none;
+}
+
+
+/* Styles*/
+.grid-container-red {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 4fr 48vw 1fr;
+    grid-template-rows: 1fr 48vw 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.red {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #a82727;
+    font-family: "Frankston Regular";
+    color: #372724;
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    animation: colorChangeRed 8s infinite;
+}
+
+.red div {
+    padding-right: 16px;
+}
+
+.grid-container-text {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 3fr 3fr 3fr 3fr 15fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.rothko {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    padding-top: 7vh;
+}
+
+.chillida {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+body {
+    margin: 0;
+    background-color: #633d38;
+    animation: colorChangeBackground 16s infinite
+}
+
+h1 {
+    font-family: "Frankston Regular";
+    font-size: 31vh;
+    color: #372724;
+    margin: 0;
+    line-height: 22vh;
+    letter-spacing: -1vw;
+    animation: fadeInx 1.0s;
+    animation: colorChangeTitel 18s infinite;
+}
+
+.slideIn{
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(.72, -0.36, 1, -0.02)
+}
+
+
+/* Brakepoint 1*/
+@media (max-width: 1024px)
+/*optimiert auf Ipad*/
+    {
+    .grid-container-text {
+        grid-template-columns: 1fr;
+        grid-template-rows: 32vh 1fr;
+    }
+
+    .grid-container-red {
+        grid-template-columns: 3fr 62vw 1fr;
+        grid-template-rows: 42vh 62vw 1fr 1fr
+    }
+
+    h1 {
+        font-size: 17vh;
+        line-height: 12vh;
+        padding-left: 8vw;
+    }
+
+    .rothko {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+
+    .chillida {
+        grid-column: 1;
+        grid-row: 2/3;
+    }
+
+    .red {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1vh;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .red div {
+        font-size: 2vh;
+        line-height: 2.5vh;
+    }
+}
+
+
+/* Brakepoint 2*/
+@media (max-width: 499px)
+/*optimiert auf Iphone 11 Pro*/
+    {
+    .grid-container-red {
+        grid-template-columns: 2fr 61vw 1fr;
+        grid-template-rows: 48vh 61vw 1fr
+    }
+
+    .red div {
+        transform: translate(0, 16vh);
+        line-height: 2.5vh;
+    }
+
+    h1 {
+        font-size: 14vh;
+        line-height: 11vh;
+        padding-left: 8vw;
+    }
+}
